@@ -1,0 +1,3 @@
+In this project, I created a browser-based application that serves as a combination of a sketchpad and an Etch-A-Sketch, demonstrating my strong DOM manipulation skills for my portfolio.
+
+The project was intentionally challenging, requiring me to frequently search for and utilize JavaScript methods and CSS properties, which allowed me to expand my knowledge and problem-solving abilities. While I followed the provided guidelines and instructions for the basic steps, the actual implementation and creativity were entirely up to me, showcasing my ability to independently apply the concepts I've learned.

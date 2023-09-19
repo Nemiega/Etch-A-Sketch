@@ -1,7 +1,35 @@
-const cdiv = document.querySelector('.container');
+const container = document.querySelector('.container');
+const clearButton = document.getElementById('clearButton');
 
-// Add 16 divs
-for (let i = 1; i < 257; i++) {
-  const div = document.createElement('div');
-  cdiv.appendChild(div);
+// Function to create the grid
+function createGrid(rows, cols) {
+    for (let i = 0; i < rows * cols; i++) {
+        const gridSquare = document.createElement('div');
+        gridSquare.classList.add('grid-square');
+        container.appendChild(gridSquare);
+    }
 }
+
+// Function to clear the grid
+function clearGrid() {
+    const gridSquares = document.querySelectorAll('.grid-square');
+    gridSquares.forEach((square) => {
+        square.style.backgroundColor = 'white';
+    });
+}
+
+// Function to change color on hover
+function changeColorOnHover(event) {
+    if (event.target.classList.contains('grid-square')) {
+        event.target.style.backgroundColor = 'gray';
+    }
+}
+
+// Add event listener to the clear button
+clearButton.addEventListener('click', clearGrid);
+
+// Add event listener for grid square hover effect
+container.addEventListener('mouseover', changeColorOnHover);
+
+// Initialize the grid with 16x16 dimensions
+createGrid(16, 16);
