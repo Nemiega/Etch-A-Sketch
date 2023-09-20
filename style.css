@@ -6,38 +6,45 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-items: center;
+    justify-content: space-between;
     background-color: yellow;
     height: 100vh;
     margin: 0;
 }
 
 .container {
+    width: 400px;
+    height: 400px;
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
     background-color: white;
-    gap: 1px;
     border: 1px solid black;
 }
 
 .container > div {
     background-color: white;
     transition: background-color 0.2s;
-    height: 25px;
-    width: 25px;
-    border: 1px black;
 }
 
 .container > div:hover {
     background-color: gray;
 }
 
-button#clearButton {
+button {
     margin-top: 10px;
     padding: 10px;
     background-color: #007BFF;
     color: white;
     border: none;
     cursor: pointer;
+}
+
+.button-div{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    margin: 20px;
+}
+
+h3 {
+    margin-bottom: 10px;
 }
